@@ -1,0 +1,16 @@
+{
+	"name": "Azuredummytest",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true,
+			"isExplicitlySet": false
+		}
+	},
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "03c1879d-266a-4791-8048-811c7096d71a",
+		"tenantId": "dcbe161e-c074-4576-bb3e-aba170963c28"
+	}
+}
