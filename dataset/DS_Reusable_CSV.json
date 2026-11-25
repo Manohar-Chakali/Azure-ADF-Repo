@@ -5,6 +5,14 @@
 			"referenceName": "LS_Azure_Blob_Storage1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"FolderName": {
+				"type": "string"
+			},
+			"FileName": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "Day3"
 		},
