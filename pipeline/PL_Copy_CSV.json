@@ -13,6 +13,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
+				"userProperties": [],
 				"typeProperties": {
 					"source": {
 						"type": "DelimitedTextSource",
@@ -60,6 +61,9 @@
 				]
 			}
 		],
+		"folder": {
+			"name": "Day1"
+		},
 		"annotations": [],
 		"lastPublishTime": "2026-11-24T17:38:03Z"
 	},
