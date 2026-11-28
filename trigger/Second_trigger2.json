@@ -1,0 +1,27 @@
+{
+	"name": "Second_trigger2",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_PARAMETER_PASSING",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"P_FILE_NAME": "customers-100.csv"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2026-11-28T12:07:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
