@@ -11,6 +11,9 @@
 		"Second_trigger2_properties_PL_PARAMETER_PASSING_parameters_P_FILE_NAME": {
 			"value": "customers-100.csv"
 		},
+		"TumblingTrigger1_properties_pipeline_parameters_P_FILE_NAME": {
+			"value": "sample-bom.csv"
+		},
 		"containerUri": {
 			"value": ""
 		},
