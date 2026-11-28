@@ -8,6 +8,9 @@
 		"LS_Azure_Blob_Storage1_connectionString": {
 			"value": ""
 		},
+		"Second_trigger2_properties_PL_PARAMETER_PASSING_parameters_P_FILE_NAME": {
+			"value": "customers-100.csv"
+		},
 		"containerUri": {
 			"value": ""
 		},

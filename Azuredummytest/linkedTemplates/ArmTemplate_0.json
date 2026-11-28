@@ -10,6 +10,10 @@
 		"LS_Azure_Blob_Storage1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_Azure_Blob_Storage1'"
+		},
+		"Second_trigger2_properties_PL_PARAMETER_PASSING_parameters_P_FILE_NAME": {
+			"type": "string",
+			"defaultValue": "customers-100.csv"
 		}
 	},
 	"variables": {
@@ -569,6 +573,38 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/DS_Reusable_CSV')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Second_trigger2')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "PL_PARAMETER_PASSING",
+							"type": "PipelineReference"
+						},
+						"parameters": {
+							"P_FILE_NAME": "[parameters('Second_trigger2_properties_PL_PARAMETER_PASSING_parameters_P_FILE_NAME')]"
+						}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Hour",
+						"interval": 1,
+						"startTime": "2026-11-28T12:07:00",
+						"timeZone": "India Standard Time"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/PL_PARAMETER_PASSING')]"
 			]
 		}
 	]
