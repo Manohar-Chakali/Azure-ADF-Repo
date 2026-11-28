@@ -1,0 +1,28 @@
+{
+	"name": "TumblingTrigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "PL_PARAMETER_PASSING",
+				"type": "PipelineReference"
+			},
+			"parameters": {
+				"P_FILE_NAME": "sample-bom.csv"
+			}
+		},
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Minute",
+			"interval": 15,
+			"startTime": "2026-11-29T18:14:00Z",
+			"delay": "00:00:00",
+			"maxConcurrency": 50,
+			"retryPolicy": {
+				"intervalInSeconds": 30
+			},
+			"dependsOn": []
+		}
+	}
+}
